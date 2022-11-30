@@ -1,5 +1,16 @@
 footer {
-  background-color: aqua;
+}
+.footer-content {
+  background-color: rgb(198, 244, 244);
   height: calc(100vh - 70vh - 80px);
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  justify-content: center;
+  text-transform: uppercase;
   text-align: center;
+}
+.footer-bottom {
+  background-color: rgb(30, 32, 24);
+  height: 70px;
 }
