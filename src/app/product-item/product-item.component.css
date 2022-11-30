@@ -1,0 +1,10 @@
+.product-item {
+  text-align: center;
+  border: 0.1px solid #ccc;
+  width: 300px;
+}
+.product-item .product-details .product-price {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
