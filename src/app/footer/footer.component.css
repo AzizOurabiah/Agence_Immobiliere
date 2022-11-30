@@ -1,0 +1,5 @@
+footer {
+  background-color: aqua;
+  height: calc(100vh - 70vh - 80px);
+  text-align: center;
+}
