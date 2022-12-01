@@ -60,7 +60,7 @@ export class ProductListComponent implements OnInit {
     this.products = [
       {
         _id: '123456789',
-        name: 'Maison de luxe',
+        name: 'Multiplex (duplex, triplex, quadruplex, quintuplex et plus)',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
         imageUrl: [
@@ -76,7 +76,7 @@ export class ProductListComponent implements OnInit {
       },
       {
         _id: '22222222',
-        name: 'Maison de luxe',
+        name: 'maison de type Isolée (unifamiliale, bungalow, à paliers, détachée et cottage)',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
         imageUrl: [
@@ -92,7 +92,7 @@ export class ProductListComponent implements OnInit {
       },
       {
         _id: '123456789',
-        name: 'Maison de luxe',
+        name: 'maison jumelée (semi-détachée)',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
         imageUrl: [
@@ -108,7 +108,7 @@ export class ProductListComponent implements OnInit {
       },
       {
         _id: '123456789',
-        name: 'Maison de luxe',
+        name: 'maison en rangée',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
         imageUrl: [
@@ -124,7 +124,7 @@ export class ProductListComponent implements OnInit {
       },
       {
         _id: '123456789',
-        name: 'Maison de luxe',
+        name: 'maison en rangée sur coin',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
         imageUrl: [
@@ -140,7 +140,7 @@ export class ProductListComponent implements OnInit {
       },
       {
         _id: '123456789',
-        name: 'Maison de luxe',
+        name: 'Triplex (trois logements)',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
         imageUrl: [
@@ -156,7 +156,7 @@ export class ProductListComponent implements OnInit {
       },
       {
         _id: '123456789',
-        name: 'Maison de luxe',
+        name: 'condominium (copropriété, condo et loft)',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
         imageUrl: [
@@ -172,7 +172,7 @@ export class ProductListComponent implements OnInit {
       },
       {
         _id: '123456789',
-        name: 'Maison de luxe',
+        name: 'Maison chalet de luxe',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
         imageUrl: [
@@ -188,7 +188,7 @@ export class ProductListComponent implements OnInit {
       },
       {
         _id: '123456789',
-        name: 'Maison de luxe',
+        name: 'maison à étages',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
         imageUrl: [
@@ -204,7 +204,7 @@ export class ProductListComponent implements OnInit {
       },
       {
         _id: '123456789',
-        name: 'Maison de luxe',
+        name: 'Maison Semi-détaché ou jumelé',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
         imageUrl: [
