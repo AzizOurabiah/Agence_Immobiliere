@@ -1,4 +1,4 @@
-<div class="product-item">
+<div class="product-item" (click)="deleteProduct(product)">
   <div class="product-image">
     <!-- <img src="../assets/images/products/maison7.png" width="300px" height="300px" alt=""> -->
     <img [src]="product? product.imageUrl[4] : ''" width="300px" height="300px" [alt]="product? 'Maison sauvage': ''">

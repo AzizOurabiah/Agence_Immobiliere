@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { findIndex } from 'rxjs';
 import { Product } from '../../models/product';
 
 @Component({
@@ -9,6 +10,7 @@ import { Product } from '../../models/product';
 export class ProductListComponent implements OnInit {
   constructor() {}
 
+  message: string = '';
   productss: string[] = ['a', 'b', 'c', 'd'];
   /*product: object = [
     {
@@ -56,10 +58,11 @@ export class ProductListComponent implements OnInit {
   //     update_at: new Date(),
   //   },
   // ];
+
   ngOnInit(): void {
     this.products = [
       {
-        _id: '123456789',
+        _id: '1',
         name: 'Multiplex (duplex, triplex, quadruplex, quintuplex et plus)',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
@@ -75,7 +78,7 @@ export class ProductListComponent implements OnInit {
         created_at: new Date(),
       },
       {
-        _id: '22222222',
+        _id: '2',
         name: 'maison de type Isolée (unifamiliale, bungalow, à paliers, détachée et cottage)',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
@@ -91,7 +94,7 @@ export class ProductListComponent implements OnInit {
         created_at: new Date(),
       },
       {
-        _id: '123456789',
+        _id: '3',
         name: 'maison jumelée (semi-détachée)',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
@@ -107,7 +110,7 @@ export class ProductListComponent implements OnInit {
         created_at: new Date(),
       },
       {
-        _id: '123456789',
+        _id: '4',
         name: 'maison en rangée',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
@@ -123,7 +126,7 @@ export class ProductListComponent implements OnInit {
         created_at: new Date(),
       },
       {
-        _id: '123456789',
+        _id: '5',
         name: 'maison en rangée sur coin',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
@@ -139,7 +142,7 @@ export class ProductListComponent implements OnInit {
         created_at: new Date(),
       },
       {
-        _id: '123456789',
+        _id: '6',
         name: 'Triplex (trois logements)',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
@@ -155,7 +158,7 @@ export class ProductListComponent implements OnInit {
         created_at: new Date(),
       },
       {
-        _id: '123456789',
+        _id: '7',
         name: 'condominium (copropriété, condo et loft)',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
@@ -171,7 +174,7 @@ export class ProductListComponent implements OnInit {
         created_at: new Date(),
       },
       {
-        _id: '123456789',
+        _id: '8',
         name: 'Maison chalet de luxe',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
@@ -187,7 +190,7 @@ export class ProductListComponent implements OnInit {
         created_at: new Date(),
       },
       {
-        _id: '123456789',
+        _id: '9',
         name: 'maison à étages',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
@@ -203,7 +206,7 @@ export class ProductListComponent implements OnInit {
         created_at: new Date(),
       },
       {
-        _id: '123456789',
+        _id: '10',
         name: 'Maison Semi-détaché ou jumelé',
         description: "Maison de luxe au plein forêt de l'Afrique West",
         category: ['Villa', 'Maison', 'Challet'],
@@ -219,6 +222,12 @@ export class ProductListComponent implements OnInit {
         created_at: new Date(),
       },
     ];
-    console.log(this.products);
+    //console.log(this.products);
+  }
+  handleDeletProduct(product: Product | undefined) {
+    this.products = this.products.filter((p) => p._id !== product?._id);
+    //this.products[0].product
+    //delete product;
+    console.log(product);
   }
 }
