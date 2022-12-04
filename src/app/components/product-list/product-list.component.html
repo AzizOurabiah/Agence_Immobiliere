@@ -1,9 +1,16 @@
 <div class="product-list">
   <!--La variable product est défini dans le component product-item-->
   <!-- <app-product-item [product]=products[0]></app-product-item> -->
-  <app-product-item *ngFor="let product of products" [product]=product
-    (deleteProductItem)="handleDeletProduct(product)">
+  <app-product-item *ngFor="let product of products" [product]=product (deleteProductItem)="handleDeletProduct($event)">
   </app-product-item>
+
+  <!-- <div *ngIf="products.length == 0" class="loadPage">
+    <h1>Please waite for data </h1>
+    <img src="../../assets/Loading_2.gif" alt="../../assets/load.webp" width="300px" height="300px">
+  </div> -->
+  <div *ngIf="!products.length" class="bar">
+    Désolé aucun article n'est disponible pour le moment
+  </div>
   <!-- <app-product-item></app-product-item>
   <app-product-item></app-product-item>
   <app-product-item></app-product-item>
