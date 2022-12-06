@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { findIndex } from 'rxjs';
 import { Product } from '../../models/product';
 
 @Component({
@@ -11,7 +10,7 @@ export class ProductListComponent implements OnInit {
   constructor() {}
 
   message: string = '';
-  productss: string[] = ['a', 'b', 'c', 'd'];
+  //productss: string[] = ['a', 'b', 'c', 'd'];
   /*product: object = [
     {
       name: 'Maison sauvage',
@@ -45,9 +44,11 @@ export class ProductListComponent implements OnInit {
     },
   ];*/
   products: Product[] = [];
+  modalProduct: Product | undefined;
 
   ok: boolean = false;
 
+  displayProduit: boolean = false;
   ngOnInit(): void {
     this.products = [
       {
@@ -213,11 +214,19 @@ export class ProductListComponent implements OnInit {
     ];
     //console.log(this.products);
   }
-  handleDeletProduct(product: Product | undefined) {
-    this.products = this.products.filter((p) => p._id !== product?._id);
-    //this.products.length == 0
-    //this.products[0].product
-    //delete product;
+  // handleDeletProduct(product: Product | undefined) {
+  //   this.products = this.products.filter((p) => p._id !== product?._id);
+  //   //this.products.length == 0
+  //   //this.products[0].product
+  //   //delete product;
+  //   console.log(product);
+  // }
+  handleProduct(product: Product | undefined) {
+    this.displayProduit = true;
+    this.modalProduct = product;
     console.log(product);
+  }
+  fermerAffichage() {
+    this.displayProduit = false;
   }
 }
