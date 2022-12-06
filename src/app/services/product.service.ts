@@ -167,13 +167,31 @@ export class ProductService {
       created_at: new Date(),
     },
   ];
+  productt: Product[] = [];
 
   constructor() {}
 
-  getProduct() {
-    return this.products;
+  // getProduct() {
+  //   return this.products;
+  // }
+  //On crée une promise pour retourner les données
+  getProduct(): Promise<Product[]> {
+    return new Promise((resolve, reject) => {
+      //On crée notre fonction qu'on veut exécuter
+      // setTimeout(() => {
+      //   if (this.products.length) {
+      //     resolve(this.products);
+      //   } else {
+      //     reject("Problème d'affichage des données");
+      //   }
+      // }, 1000);
+      if (this.products.length) {
+        resolve(this.products);
+      } else {
+        reject('Problème de récupération des données !');
+      }
+    });
   }
-
   addProduct() {}
   editProduct(_id: string, product: Product) {
     if (_id == product._id) {

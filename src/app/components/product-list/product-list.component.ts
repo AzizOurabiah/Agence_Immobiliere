@@ -53,7 +53,14 @@ export class ProductListComponent implements OnInit {
 
   displayProduit: boolean = false;
   ngOnInit(): void {
-    this.products = this.produitService.getProduct();
+    this.produitService
+      .getProduct()
+      .then((product: Product[]) => {
+        this.products = product;
+      })
+      .catch((error) => {
+        console.log("Voilà l'erreur " + error);
+      });
     // this.products = [
     //   {
     //     _id: '1',
