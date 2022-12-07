@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/models/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product-item',
@@ -8,6 +9,7 @@ import { Product } from 'src/app/models/product';
 })
 export class ProductItemComponent implements OnInit {
   date: Date = new Date();
+  data: Number | undefined;
 
   //Instruction pour recevoir les données de type Product, de composant parent list vers composant fils item
   @Input() productsss: Product | undefined;
@@ -20,12 +22,15 @@ export class ProductItemComponent implements OnInit {
   //Variable de type eventEmitter pour envoyer les données au Parent
   @Output() handleProduct: EventEmitter<Product> = new EventEmitter<Product>();
 
-  constructor() {}
+  constructor(private produitService: ProductService) {}
 
   ngOnInit(): void {
     // console.log('------------PRODUCT ITEM-------------------');
     // console.log(this.product?._id);
     //this.deleteProduct(this.product);
+    this.produitService.getNumber().subscribe((value) => {
+      this.data = value;
+    });
   }
 
   // deletProduct(produit: Product | undefined) {

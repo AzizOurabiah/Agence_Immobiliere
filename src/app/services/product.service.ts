@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { interval, Observable, of } from 'rxjs';
 import { Product } from '../models/product';
 
 @Injectable({
@@ -205,4 +206,8 @@ export class ProductService {
     }
   }
   deletProduct(_id: string) {}
+
+  getNumber(): Observable<Number> {
+    return interval(1000);
+  }
 }

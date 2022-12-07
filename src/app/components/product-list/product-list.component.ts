@@ -51,6 +51,8 @@ export class ProductListComponent implements OnInit {
 
   ok: boolean = false;
 
+  data: Number | undefined;
+
   displayProduit: boolean = false;
   ngOnInit(): void {
     this.produitService
@@ -225,6 +227,9 @@ export class ProductListComponent implements OnInit {
     // ];
     //console.log(this.products);
     //this.products = produitService.getProduct;
+    this.produitService.getNumber().subscribe((value) => {
+      this.data = value;
+    });
   }
   // handleDeletProduct(product: Product | undefined) {
   //   this.products = this.products.filter((p) => p._id !== product?._id);
