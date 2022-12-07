@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  serveurUrl: '../assets/api/product.json',
+  siteName: 'My Shopp app',
 };
 
 /*

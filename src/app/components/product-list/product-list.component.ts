@@ -62,7 +62,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
         this.products = product;
       },
       error: (error) => {
-        console.log("Voilà l'erreur " + error);
+        console.log("Voilà l'erreur ", error);
       },
       complete: () => {
         console.log('The task is compléted ! ');
