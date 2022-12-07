@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   title: string = 'My Shope';
   data: Number | undefined;
   dataSubscribe: Subscription | undefined;
-  constructor(private produitService: ProductService) {}
+  constructor(/*private produitService: ProductService*/) {}
   ngOnDestroy(): void {
     this.dataSubscribe?.unsubscribe();
   }
@@ -20,16 +20,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
   // products: Product[] = [];
 
   ngOnInit(): void {
-    this.dataSubscribe = this.produitService.getNumber().subscribe({
-      next: (value: any) => {
-        this.data = value;
-      },
-      error: (error: any) => {
-        console.log("Voila la valeur d'erreur !" + error);
-      },
-      complete: () => {
-        console.log('Action completd ! ');
-      },
-    });
+    // this.dataSubscribe = this.produitService.getNumber().subscribe({
+    //   next: (value: any) => {
+    //     this.data = value;
+    //   },
+    //   error: (error: any) => {
+    //     console.log("Voila la valeur d'erreur !" + error);
+    //   },
+    //   complete: () => {
+    //     console.log('Action completd ! ');
+    //   },
+    // });
   }
 }

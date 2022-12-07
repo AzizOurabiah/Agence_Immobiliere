@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { ModalProductViewComponent } from './components/modal-product-view/modal
     ProductItemComponent,
     ModalProductViewComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
