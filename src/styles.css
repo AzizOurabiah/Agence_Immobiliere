@@ -31,3 +31,9 @@ body {
   cursor: pointer;
   color: #1d1d1d;
 }
+.gap-5 {
+  gap: 10px;
+}
+.gap-10 {
+  gap: 10px;
+}

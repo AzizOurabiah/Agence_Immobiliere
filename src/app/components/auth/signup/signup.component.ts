@@ -8,22 +8,30 @@ import { Component, OnInit } from '@angular/core';
 export class SignupComponent implements OnInit {
   firstName: string = '';
   names: string[] = [];
+  update: boolean = false;
+  index: number | undefined;
   constructor() {}
 
   ngOnInit(): void {}
 
   saveName(name: string) {
-    this.names.push(name);
-    this.firstName = '';
+    if (this.firstName) {
+      this.names.push(name);
+      this.firstName = '';
+      //this.update = true;
+    }
   }
-  deletName(index: number) {
-    console.log(this.names[index]);
-    this.names.splice(index, 1);
 
-    //let el = this.names[index];
-    // this.names.forEach(element => {
-    //   if(element != el){
-    //   }
-    //});
+  handleDelete(index: number) {
+    if (index >= 0) {
+      this.names.splice(index, 1);
+    }
+  }
+  handleUpdate(index: number) {
+    if (index >= 0) {
+      let name = this.names[index];
+      this.names.splice(index, 1);
+      this.firstName = name;
+    }
   }
 }

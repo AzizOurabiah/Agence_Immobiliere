@@ -1,10 +1,24 @@
 <div class="signin signup">
   <div class="form-inline firstname">
-    <input type="text" name="firstname" placeholder="Your name..." [(ngModel)]="firstName">
+    <input type="text" name="firstname" [placeholder]="firstName? 'firstName': 'Your name'" [(ngModel)]="firstName">
     <button (click)="saveName(firstName)">Saved</button>
+
   </div>
-  <div *ngFor="let name of names; let i=index" class="form-inline firstname">
+  <!-- <div *ngFor="let name of names; let index=index" class="form-inline firstname">
     <input type="text" placeholder="{{name}}">
-    <button (click)="deletName(i)">Delete {{i}}</button>
+    <button (click)="handleDelete(index)">Delete {{index}}</button>
+    <div class="update">
+      <button (click)="handleUpdate(index)">Update {{index}}</button>
+    </div>
+  </div> -->
+  <div class="names">
+    <ul>
+      <li class="flex aic" *ngFor="let name of names; let index = index">{{name}}
+        <div class="name-action flex gap-10">
+          <button class="btn" (click)="handleUpdate(index)">Update</button>
+          <button class="btn" (click)="handleDelete(index)">Delete</button>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>

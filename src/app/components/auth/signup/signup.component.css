@@ -21,3 +21,23 @@
   cursor: pointer;
   font-weight: bold;
 }
+.btn {
+  font-size: 1.4rem;
+  height: 40px;
+  background-color: #1d1d1d;
+  border: none;
+  min-width: 100px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.signin ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+}
+.signin ul li {
+  border: 0.1px solid #1d1d1d;
+  justify-content: space-between;
+  padding: 5px;
+}
