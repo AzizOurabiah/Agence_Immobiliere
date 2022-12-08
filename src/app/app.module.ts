@@ -10,6 +10,9 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SigninComponent } from './components/auth/signin/signin.component';
+import { SignupComponent } from './components/auth/signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,8 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
     ProductListComponent,
     ProductItemComponent,
     ModalProductViewComponent,
+    SigninComponent,
+    SignupComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
