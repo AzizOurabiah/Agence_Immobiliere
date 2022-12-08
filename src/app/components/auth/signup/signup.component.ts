@@ -10,6 +10,12 @@ export class SignupComponent implements OnInit {
   names: string[] = [];
   update: boolean = false;
   index: number | undefined;
+  // Variables
+  name: string = '';
+  lastName: string = '';
+  email: string = '';
+  pswd: string = '';
+  cfPswd: string = '';
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,24 +1,29 @@
-<div class="signin signup">
-  <div class="form-inline firstname">
-    <input type="text" name="firstname" [placeholder]="firstName? 'firstName': 'Your name'" [(ngModel)]="firstName">
-    <button (click)="saveName(firstName)">Saved</button>
-
-  </div>
-  <!-- <div *ngFor="let name of names; let index=index" class="form-inline firstname">
-    <input type="text" placeholder="{{name}}">
-    <button (click)="handleDelete(index)">Delete {{index}}</button>
-    <div class="update">
-      <button (click)="handleUpdate(index)">Update {{index}}</button>
-    </div>
-  </div> -->
-  <div class="names">
-    <ul>
-      <li class="flex aic" *ngFor="let name of names; let index = index">{{name}}
-        <div class="name-action flex gap-10">
-          <button class="btn" (click)="handleUpdate(index)">Update</button>
-          <button class="btn" (click)="handleDelete(index)">Delete</button>
-        </div>
-      </li>
-    </ul>
+<div class="signup">
+  <div class="form-container">
+    <form action="">
+      <h2>Inscription</h2>
+      <div class="form-line flex">
+        <input class="flex-1" type="text" name="firstname" placeholder="Your firstname ..." [(ngModel)]="name">
+        <input class="flex-1" type="text" name="lastname" placeholder="Your lastname ..." [(ngModel)]="lastName">
+      </div>
+      <div class="form-line flex">
+        <input class="flex-1" type="email" name="email" placeholder="Your email ..." [(ngModel)]="email">
+      </div>
+      <div class="form-line flex">
+        <input class="flex-1" type="password" name="passeword" placeholder="Your passeword ..." [(ngModel)]="pswd">
+      </div>
+      <div class="form-line flex">
+        <input class="flex-1" type="password" name="passewordConfirm" placeholder="Your passeword confirme ..."
+          [(ngModel)]="cfPswd">
+      </div>
+      <div class="button_flex">
+        <button class="btn flex-1">S'inscrire</button>
+      </div>
+    </form>
   </div>
 </div>
+<h4>{{name}}</h4>
+<h4>{{lastName}}</h4>
+<h4>{{email}}</h4>
+<h4>{{pswd}}</h4>
+<h4>{{cfPswd}}</h4>
