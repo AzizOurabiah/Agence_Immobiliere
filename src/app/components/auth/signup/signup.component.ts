@@ -14,12 +14,13 @@ export class SignupComponent implements OnInit {
     passeword: '',
     passewordConfirme: '',
   };
+  //user: User | undefined;
 
-  firstName: string | undefined;
-  lastName: string | undefined;
-  email: string | undefined;
-  pswd: string | undefined;
-  cfPswd: string | undefined;
+  // firstName: string | undefined;
+  // lastName: string | undefined;
+  // email: string | undefined;
+  // passeword: string | undefined;
+  // passewordConfirme: string | undefined;
   //////////////////////////
   constructor() {}
 
@@ -27,7 +28,22 @@ export class SignupComponent implements OnInit {
     // this.firstName = this.user?.firstName;
     // this.lastName = this.user?.lastName;
     // this.email = this.user?.email;
-    // this.pswd = this.user?.passeword;
-    // this.cfPswd = this.user?.confirmPasseword;
+    // this.passeword = this.user?.passeword;
+    // this.passewordConfirme = this.user?.passewordConfirme;
+  }
+  recuperDonnees() {
+    // this.firstName = this.user?.firstName;
+    // this.lastName = this.user?.lastName;
+    // this.email = this.user?.email;
+    // this.passeword = this.user?.passeword;
+    // this.passewordConfirme = this.user?.passewordConfirme;
+    // console.log(
+    //   this.firstName,
+    //   this.lastName,
+    //   this.email,
+    //   this.passeword,
+    //   this.passewordConfirme
+    // );
+    console.log(this.user);
   }
 }

@@ -19,6 +19,9 @@ body {
 .jcc {
   justify-content: center;
 }
+.wrap {
+  flex-wrap: wrap;
+}
 .column {
   flex-direction: column;
 }

@@ -2,7 +2,7 @@
   <div class="form-container">
     <form action="">
       <h2>Inscription</h2>
-      <div class="form-line flex">
+      <div class="form-line flex gap-10 wrap">
         <input class="flex-1" type="text" name="firstname" placeholder="Your firstname ..."
           [(ngModel)]="user.firstName">
         <input class="flex-1" type="text" name="lastname" placeholder="Your lastname ..." [(ngModel)]="user.lastName">
@@ -19,14 +19,15 @@
           [(ngModel)]="user.passewordConfirme">
       </div>
       <div class="button_flex">
-        <button class="btn flex-1">S'inscrire</button>
+        <button class="btn flex-1" (click)="recuperDonnees()">S'inscrire</button>
       </div>
     </form>
   </div>
 </div>
 <p>{{user | json}}</p>
+<!--
 <h4>{{user.firstName}}</h4>
 <h4>{{user.lastName}}</h4>
 <h4>{{user.email}}</h4>
-<h4>{{user.passeword}}</h4>
+<h4>{{user.passeword}}</h4> -->
 <!-- <h4>{{cfPswd}}</h4> -->
