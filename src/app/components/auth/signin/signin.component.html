@@ -1,6 +1,6 @@
 <div class="signup">
   <div class="form-container">
-    <form action="">
+    <form action="" [formGroup]="signinForm">
       <h2>Connexion</h2>
       <!-- <div class="form-line flex gap-10 wrap">
         <input class="flex-1" type="text" name="firstname" placeholder="Your firstname ..."
@@ -8,11 +8,11 @@
         <input class="flex-1" type="text" name="lastname" placeholder="Your lastname ..." [(ngModel)]="user.lastName">
       </div> -->
       <div class="form-line flex">
-        <input class="flex-1" type="email" name="email" placeholder="Your email ..." [(ngModel)]="user.email">
+        <input class="flex-1" type="email" name="email" placeholder="Your email ..." [formControl]="email">
       </div>
       <div class="form-line flex">
         <input class="flex-1" type="password" name="passeword" placeholder="Your passeword ..."
-          [(ngModel)]="user.passeword">
+          [formControl]="passeword">
       </div>
       <!-- <div class="form-line flex">
         <input class="flex-1" type="password" name="passewordConfirm" placeholder="Your passeword confirme ..."
