@@ -17,7 +17,7 @@ export class SigninComponent implements OnInit {
     email: '',
     passeword: '',
   };
-  //Un contenaur qui représente notre formulaire
+  //Un conteneur qui représente notre formulaire
   signinForm: FormGroup;
   //Déclaration des variables de formulaire (éléments de formulaires)
   email: FormControl;
@@ -30,7 +30,7 @@ export class SigninComponent implements OnInit {
       Validators.minLength(6),
       Validators.required,
     ]);
-    //Initialisation de notre formulaire
+    //On a affecté les variables au formulaire -Initialisation de notre formulaire-
     this.signinForm = fb.group({
       email: this.email,
       passeword: this.passeword,
@@ -41,5 +41,6 @@ export class SigninComponent implements OnInit {
   handleSubmit() {
     console.log(this.signinForm);
     console.log(this.signinForm.value);
+    console.log(this.signinForm.valid);
   }
 }

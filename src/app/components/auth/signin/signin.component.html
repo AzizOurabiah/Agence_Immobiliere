@@ -10,16 +10,29 @@
       <div class="form-line flex">
         <input class="flex-1" type="email" name="email" placeholder="Your email ..." [formControl]="email">
       </div>
+      <!-- <h4 *ngIf="signinForm.status != 'Valid'">Email n'est pas valid</h4> -->
+      <div class="error" *ngIf="!email.valid && email.dirty">
+        <p *ngIf="email.hasError('required')">Champ email est requis</p>
+        <p *ngIf="!email.hasError('required')">L'émail ne respect pas le bon format</p>
+      </div>
       <div class="form-line flex">
         <input class="flex-1" type="password" name="passeword" placeholder="Your passeword ..."
           [formControl]="passeword">
       </div>
+      <div class="error" *ngIf="!passeword.valid
+      && passeword.dirty">
+        <p *ngIf="passeword.hasError('required')">Le passeword is required</p>
+        <p *ngIf="!passeword.hasError('minLength')">Le passeword doit avoir minimum 6 caractères</p>
+      </div>
+      <div class="error" *ngIf="">Le mot de pass doit avoir au minimum 6 caractères </div>
+      <!-- <h4 *ngIf="!signinForm.status">Passeword n'est pas valid</h4> -->
       <!-- <div class="form-line flex">
         <input class="flex-1" type="password" name="passewordConfirm" placeholder="Your passeword confirme ..."
           [(ngModel)]="user.passewordConfirme">
       </div> -->
       <div class="button_flex">
-        <button class="btn flex-1" (click)="handleSubmit()">Connexion</button>
+        <!-- <button class="btn flex-1" [class]="!signinForm.valid? 'disabled': ''" [disabled]="!signinForm.valid" -->
+        <button class="btn flex-1" [disabled]="!signinForm.valid" (click)="handleSubmit()">Connexion</button>
       </div>
     </form>
     <h4><a href="#">Mot de passe oublier</a></h4>
