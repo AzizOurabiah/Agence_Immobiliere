@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
     // this.passeword = this.user?.passeword;
     // this.passewordConfirme = this.user?.passewordConfirme;
   }
-  recuperDonnees() {
+  handleSubmit() {
     // this.firstName = this.user?.firstName;
     // this.lastName = this.user?.lastName;
     // this.email = this.user?.email;

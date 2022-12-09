@@ -1,1 +1,35 @@
-<p>signin works!</p>
+<div class="signup">
+  <div class="form-container">
+    <form action="">
+      <h2>Connexion</h2>
+      <!-- <div class="form-line flex gap-10 wrap">
+        <input class="flex-1" type="text" name="firstname" placeholder="Your firstname ..."
+          [(ngModel)]="user.firstName">
+        <input class="flex-1" type="text" name="lastname" placeholder="Your lastname ..." [(ngModel)]="user.lastName">
+      </div> -->
+      <div class="form-line flex">
+        <input class="flex-1" type="email" name="email" placeholder="Your email ..." [(ngModel)]="user.email">
+      </div>
+      <div class="form-line flex">
+        <input class="flex-1" type="password" name="passeword" placeholder="Your passeword ..."
+          [(ngModel)]="user.passeword">
+      </div>
+      <!-- <div class="form-line flex">
+        <input class="flex-1" type="password" name="passewordConfirm" placeholder="Your passeword confirme ..."
+          [(ngModel)]="user.passewordConfirme">
+      </div> -->
+      <div class="button_flex">
+        <button class="btn flex-1" (click)="handleSubmit()">Connexion</button>
+      </div>
+    </form>
+    <h4><a href="#">Mot de passe oublier</a></h4>
+    <h4><a href="#">Veuillez s'inscrire</a></h4>
+  </div>
+</div>
+<p>{{user | json}}</p>
+<!--
+<h4>{{user.firstName}}</h4>
+<h4>{{user.lastName}}</h4>
+<h4>{{user.email}}</h4>
+<h4>{{user.passeword}}</h4> -->
+<!-- <h4>{{cfPswd}}</h4> -->
