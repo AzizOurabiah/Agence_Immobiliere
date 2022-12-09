@@ -3,18 +3,20 @@
     <form action="">
       <h2>Inscription</h2>
       <div class="form-line flex">
-        <input class="flex-1" type="text" name="firstname" placeholder="Your firstname ..." [(ngModel)]="name">
-        <input class="flex-1" type="text" name="lastname" placeholder="Your lastname ..." [(ngModel)]="lastName">
+        <input class="flex-1" type="text" name="firstname" placeholder="Your firstname ..."
+          [(ngModel)]="user.firstName">
+        <input class="flex-1" type="text" name="lastname" placeholder="Your lastname ..." [(ngModel)]="user.lastName">
       </div>
       <div class="form-line flex">
-        <input class="flex-1" type="email" name="email" placeholder="Your email ..." [(ngModel)]="email">
+        <input class="flex-1" type="email" name="email" placeholder="Your email ..." [(ngModel)]="user.email">
       </div>
       <div class="form-line flex">
-        <input class="flex-1" type="password" name="passeword" placeholder="Your passeword ..." [(ngModel)]="pswd">
+        <input class="flex-1" type="password" name="passeword" placeholder="Your passeword ..."
+          [(ngModel)]="user.passeword">
       </div>
       <div class="form-line flex">
         <input class="flex-1" type="password" name="passewordConfirm" placeholder="Your passeword confirme ..."
-          [(ngModel)]="cfPswd">
+          [(ngModel)]="user.passewordConfirme">
       </div>
       <div class="button_flex">
         <button class="btn flex-1">S'inscrire</button>
@@ -22,8 +24,9 @@
     </form>
   </div>
 </div>
-<h4>{{name}}</h4>
-<h4>{{lastName}}</h4>
-<h4>{{email}}</h4>
-<h4>{{pswd}}</h4>
-<h4>{{cfPswd}}</h4>
+<p>{{user | json}}</p>
+<h4>{{user.firstName}}</h4>
+<h4>{{user.lastName}}</h4>
+<h4>{{user.email}}</h4>
+<h4>{{user.passeword}}</h4>
+<!-- <h4>{{cfPswd}}</h4> -->

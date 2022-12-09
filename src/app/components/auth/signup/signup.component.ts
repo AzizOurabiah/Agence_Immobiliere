@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../../models/user';
 
 @Component({
   selector: 'app-signup',
@@ -6,38 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  firstName: string = '';
-  names: string[] = [];
-  update: boolean = false;
-  index: number | undefined;
-  // Variables
-  name: string = '';
-  lastName: string = '';
-  email: string = '';
-  pswd: string = '';
-  cfPswd: string = '';
+  user: User = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    passeword: '',
+    passewordConfirme: '',
+  };
+
+  firstName: string | undefined;
+  lastName: string | undefined;
+  email: string | undefined;
+  pswd: string | undefined;
+  cfPswd: string | undefined;
+  //////////////////////////
   constructor() {}
 
-  ngOnInit(): void {}
-
-  saveName(name: string) {
-    if (this.firstName) {
-      this.names.push(name);
-      this.firstName = '';
-      //this.update = true;
-    }
-  }
-
-  handleDelete(index: number) {
-    if (index >= 0) {
-      this.names.splice(index, 1);
-    }
-  }
-  handleUpdate(index: number) {
-    if (index >= 0) {
-      let name = this.names[index];
-      this.names.splice(index, 1);
-      this.firstName = name;
-    }
+  ngOnInit(): void {
+    // this.firstName = this.user?.firstName;
+    // this.lastName = this.user?.lastName;
+    // this.email = this.user?.email;
+    // this.pswd = this.user?.passeword;
+    // this.cfPswd = this.user?.confirmPasseword;
   }
 }
