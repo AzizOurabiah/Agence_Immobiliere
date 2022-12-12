@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serveurUrl: '../assets/api/product.json',
+  serveurUrl: '../assets/api/productAll.json',
   siteName: 'My Shopp app',
 };
 
