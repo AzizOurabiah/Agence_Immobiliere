@@ -24,7 +24,7 @@ export class SigninComponent implements OnInit {
   passeword: FormControl;
 
   constructor(private fb: FormBuilder) {
-    //Initialisation les variables email et passeword
+    //Initialisation les variables de type controle pour formBuilder
     this.email = fb.control('', [Validators.email, Validators.required]);
     this.passeword = fb.control('', [
       Validators.minLength(6),
