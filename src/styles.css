@@ -59,11 +59,11 @@ body {
   height: 70vh;
 }
 .btn {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   height: 40px;
   background-color: #1d1d1d;
   border: none;
-  min-width: 100%;
+  min-width: 140px;
   color: white;
   cursor: pointer;
   font-weight: bold;

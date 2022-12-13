@@ -5,18 +5,20 @@
     <img [src]="product? product.imageUrl[0] : ''" [alt]="product?.name" srcset="">
 
   </div>
-  <div class="modal-product-view-details flex-1 ">
+  <div class="single-product-view-details flex-1 ">
     <!-- <h1>Product détails</h1> -->
     <h2>{{product?.name?.substring(0, 25)}}</h2>
-    <div class="modal-product-view-details-price">
+    <div class="single-product-view-details-price">
       <h4>$ {{(product?.regular_price || 0)/100 | currency: "CAD "}}</h4>
       <del>
         <h4>$ {{(product?.sold_price || 0)/100 | currency: "CAD " }}</h4>
       </del>
     </div>
-    <div class="modal-product-view-details-created-at">
+    <div class="single-product-view-details-created-at">
       Crée le : 12/12/2025
     </div>
-    <!-- <button (click)="fermerAffichage()" class="btn close">Fermer</button> -->
+    <div class="product-action-button">
+      <button class="btn">Pay Now</button>
+    </div>
   </div>
 </div>
