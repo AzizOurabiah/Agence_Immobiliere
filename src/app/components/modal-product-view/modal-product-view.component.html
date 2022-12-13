@@ -2,7 +2,8 @@
   <div class="overly"></div>
   <div class="modal-product-view-container flex">
     <div class="modal-product-view-image flex-1">
-      <img src="./assets/images/products/maison_2/1.png" alt="" srcset="">
+      <!-- <img src="./assets/images/products/maison_2/1.png" alt="" srcset=""> -->
+      <img [src]="productss? productss.imageUrl[0] : ''" [alt]="productss?.name" srcset="">
     </div>
     <div class="modal-product-view-details flex-1 flex jcc aic column">
       <!-- <h1>Product détails</h1> -->
