@@ -1,5 +1,6 @@
 <!-- <p>{{product | json}}</p> -->
-<div class="single-product flex gap-10 content ">
+<app-loading *ngIf="isLoading"></app-loading>
+<div *ngIf="!isLoading" class="single-product flex gap-10 content ">
   <div class="single-product-image flex-1  flex">
     <!-- <img src="./assets/images/products/maison_2/1.png" alt="" srcset=""> -->
     <img [src]="product? product.imageUrl[0] : ''" [alt]="product?.name" srcset="">

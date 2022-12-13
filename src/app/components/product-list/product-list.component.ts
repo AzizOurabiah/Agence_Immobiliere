@@ -50,6 +50,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   SubProducts: Subscription | undefined;
   modalProduct: Product | undefined;
+  isLoading: boolean = true;
 
   ok: boolean = false;
 
@@ -60,6 +61,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
     this.SubProducts = this.produitService.getProduct().subscribe({
       next: (product: Product[]) => {
         this.products = product;
+        this.isLoading = false;
       },
       error: (error) => {
         console.log("Voilà l'erreur ", error);

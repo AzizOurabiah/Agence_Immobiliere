@@ -15,6 +15,7 @@ export class ProductComponent implements OnInit {
   slug: string | undefined;
   product: Product | undefined;
   productSub: Subscription | undefined;
+  isLoading: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,9 +27,11 @@ export class ProductComponent implements OnInit {
     this.productSub = this.productService.getProduct().subscribe({
       next: (products: Product[]) => {
         this.product = products.filter((p) => p.slug === this.slug)[0];
+        this.isLoading = false;
       },
       error: (error: any) => {
         console.log("Voilà l'erreur ", error);
+        this.isLoading = true;
       },
     });
 

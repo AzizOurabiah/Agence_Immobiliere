@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from 'src/app/app.routing';
 import { ProductComponent } from './components/product/product.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ProductComponent } from './components/product/product.component';
     SigninComponent,
     SignupComponent,
     ProductComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
