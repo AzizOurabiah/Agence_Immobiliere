@@ -8,3 +8,19 @@
 .single-product .single-product-image img {
   width: 400px;
 }
+@media screen and (max-width: 900px) {
+  .single-product {
+    flex-direction: column-reverse;
+  }
+  .single-product .single-product-image {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* .single-product {
+    flex-direction: column-reverse;
+  } */
+  .single-product .single-product-image img {
+    width: 95%;
+  }
+}
