@@ -22,6 +22,10 @@ a {
   gap: 20px;
   justify-content: center;
 }
+button:hover {
+  background-color: antiquewhite;
+  color: black;
+}
 @media screen and (max-width: 450px) {
   .product-item {
     width: 100%;

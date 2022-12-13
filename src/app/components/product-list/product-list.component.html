@@ -1,13 +1,9 @@
 <app-loading *ngIf="isLoading"></app-loading>
-<div *ngIf="!isLoading && products.length">
-  <div class="product-list">
-    <!--La variable product est défini dans le component product-item-->
-    <!-- <app-product-item [product]=products[0]></app-product-item> -->
-    <app-product-item *ngFor="let product of products" [productsss]=product (handleProduct)="handleProduct($event)">
-
-    </app-product-item>
-  </div>
-
+<div class="product-list">
+  <!--La variable product est défini dans le component product-item-->
+  <!-- <app-product-item [product]=products[0]></app-product-item> -->
+  <app-product-item *ngFor="let product of products" [productsss]=product (handleProduct)="handleProduct($event)">
+  </app-product-item>
 
   <div class="bar" *ngIf="!isLoading && !products.length">
     Désolé aucun article n'est disponible pour le moment
