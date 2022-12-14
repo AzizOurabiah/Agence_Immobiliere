@@ -1,12 +1,12 @@
 <div class="product-item">
-  <div class="product-image">
+  <div class="product-image" [routerLink]="['product', productsss?.slug]">
     <!-- <img src="../assets/images/products/maison7.png" width="300px" height="300px" alt=""> -->
     <img [src]="productsss? productsss.imageUrl[4] : ''" width="300px" height="300px"
       [alt]="productsss? 'Maison sauvage': ''">
   </div>
   <div class="product-details">
     <div class="product-name">
-      <h2>{{productsss?.name?.substring(0, 40) }} {{ productsss && productsss.name[41] ?
+      <h2>{{productsss?.name?.substring(0, 19) }} {{ productsss && productsss.name[41] ?
         "..." : null }}</h2>
     </div>
     <div class="product-price">
@@ -14,12 +14,13 @@
       <del>
         <h3>$ {{(productsss?.regular_price || 0)/100}}</h3>
       </del>
+      <!-- <button class="btn" (click)="envoieDonneesProduitCliquer(productsss)">Quick View</button> -->
     </div>
     <div class="product-action-button flex gap-10 jcc">
       <button class="btn" (click)="envoieDonneesProduitCliquer(productsss)">Quick View</button>
-      <button class="btn" [routerLink]="['product', productsss?.slug]">
+      <!-- <button class="btn">
         Détails view
-      </button>
+      </button> -->
     </div>
   </div>
 </div>
