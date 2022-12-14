@@ -2,13 +2,20 @@
 } */
 .footer-content {
   background-color: #3f51b5;
-  min-height: calc(100vh - 70vh - 80px);
-
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-align: center;
+  color: white;
+}
+footer .content {
+  min-height: 250px;
 }
 .footer-bottom {
-  background-color: rgb(28, 21, 234);
+  background-color: #091c8a;
   height: 70px;
+}
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+.footer-list a {
+  text-decoration: none;
+  color: white;
 }

@@ -12,7 +12,8 @@ body {
 .b {
   border: 0.1px solid black;
 }
-.flex {
+.flex,
+.row {
   display: flex;
 }
 .flex-1 {
@@ -32,17 +33,6 @@ body {
 }
 .column {
   flex-direction: column;
-}
-.btn {
-  /* height: 40px; */
-  /* min-width: 50px; */
-  /* padding: 10px; */
-  /* margin: 10px 0;
-  outline: none; */
-  /* cursor: pointer; */
-  /* color: #841414; */
-  /* padding: 0 5px; */
-  /* box-shadow: 0 3px 5px -1px #0003, 0.6px 10px #00000024, 0 1px 18px #0000001f; */
 }
 .gap-5 {
   gap: 10px;
