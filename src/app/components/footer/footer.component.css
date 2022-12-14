@@ -18,6 +18,7 @@ footer .content {
 }
 .footer-widget {
   min-width: 200px;
+  padding: 10px 0;
 }
 .footer-list {
   list-style: none;
