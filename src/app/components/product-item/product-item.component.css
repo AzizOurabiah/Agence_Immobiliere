@@ -10,12 +10,14 @@ a {
 .product-item {
   border: 0.1px solid #ccc;
   width: 200px;
-  height: 350px;
+  height: 340px;
   cursor: pointer;
+  box-shadow: 0 3px 5px -1px #0003, 0.6px 10px #00000024, 0 1px 18px #0000001f;
 }
 .product-item .product-name h2 {
   padding: 0 10px;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  height: 35px;
   margin: 0;
 }
 /* .product-item .product-name {
