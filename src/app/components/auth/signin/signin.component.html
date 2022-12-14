@@ -1,12 +1,13 @@
 <div class="signup">
   <div class="form-container">
     <form action="" [formGroup]="signinForm">
-      <h2>Connexion</h2>
+      <h2>Sign In</h2>
       <!-- <div class="form-line flex gap-10 wrap">
         <input class="flex-1" type="text" name="firstname" placeholder="Your firstname ..."
           [(ngModel)]="user.firstName">
         <input class="flex-1" type="text" name="lastname" placeholder="Your lastname ..." [(ngModel)]="user.lastName">
       </div> -->
+      <p class="tac">Don't have an acount? if then click here to <a routerLink="/signup" href="#"> register</a></p>
       <div class="form-line flex">
         <input class="flex-1" type="email" name="email" placeholder="Your email ..." [formControl]="email">
       </div>
@@ -32,7 +33,7 @@
       </div> -->
       <div class="button_flex">
         <!-- <button class="btn flex-1" [class]="!signinForm.valid? 'disabled': ''" [disabled]="!signinForm.valid" -->
-        <button class="btn flex-1" [disabled]="!signinForm.valid" (click)="handleSubmit()">Connexion</button>
+        <button class="btn flex-1" [disabled]="!signinForm.valid" (click)="handleSubmit()">Sing In</button>
       </div>
     </form>
     <h4><a href="#">Mot de passe oublier</a></h4>

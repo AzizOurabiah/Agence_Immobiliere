@@ -1,7 +1,8 @@
 <div class="signup">
   <div class="form-container">
     <form action="">
-      <h2>Inscription</h2>
+      <h2>Sign Up</h2>
+      <p class="tac">Already have account <a routerLink="/signin">Signin</a></p>
       <div class="form-line flex gap-10 wrap">
         <input class="flex-1" type="text" name="firstname" placeholder="Your firstname ..."
           [(ngModel)]="user.firstName">
@@ -19,7 +20,7 @@
           [(ngModel)]="user.passewordConfirme">
       </div>
       <div class="button_flex">
-        <button class="btn flex-1" (click)="handleSubmit()">S'inscrire</button>
+        <button class="btn flex-1" (click)="handleSubmit()">Sign Up</button>
       </div>
     </form>
   </div>

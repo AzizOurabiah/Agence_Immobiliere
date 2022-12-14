@@ -1,11 +1,4 @@
 /* .disabled {
   background-color: gray;
 } */
-button:disabled {
-  /* background-color: gray; */
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-.error {
-  color: red;
-}
+
