@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductItemComponent implements OnInit {
   date: Date = new Date();
   data: Number | undefined;
+  isLoading: boolean = true;
 
   //Instruction pour recevoir les données de type Product, de composant parent list vers composant fils item
   @Input() productsss: Product | undefined;

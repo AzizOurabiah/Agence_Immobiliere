@@ -1,9 +1,18 @@
 <!-- <p>{{product | json}}</p> -->
 <app-loading *ngIf="isLoading"></app-loading>
 <div *ngIf="!isLoading" class="single-product flex gap-10 content ">
-  <div class="single-product-image flex-1  flex">
+  <div class="single-product-image flex-1 gap-10 flex">
+
+    <div class="single-product-image-list flex column gap-10 flex-1">
+      <img *ngFor="let url of product?.imageUrl" (click)="handleChangeCurrentImage(url)" width="100" [src]="url"
+        [alt]="product?.name" srcset="" [ngClass]="{current: currentImage == url}">
+    </div>
+
+    <div class="single-product-image-current flex-3">
+      <!-- <img [src]="product? product.imageUrl[0] : ''" [alt]="product?.name" srcset=""> -->
+      <img [src]="currentImage" [alt]="product?.name" srcset="">
+    </div>
     <!-- <img src="./assets/images/products/maison_2/1.png" alt="" srcset=""> -->
-    <img [src]="product? product.imageUrl[0] : ''" [alt]="product?.name" srcset="">
 
   </div>
   <div class="single-product-view-details flex-1 ">

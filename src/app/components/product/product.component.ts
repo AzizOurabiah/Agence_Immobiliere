@@ -17,6 +17,9 @@ export class ProductComponent implements OnInit {
   productSub: Subscription | undefined;
   isLoading: boolean = true;
 
+  catchImagee: string | undefined;
+  currentImage: string | undefined;
+
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService
@@ -27,6 +30,7 @@ export class ProductComponent implements OnInit {
     this.productSub = this.productService.getProduct().subscribe({
       next: (products: Product[]) => {
         this.product = products.filter((p) => p.slug === this.slug)[0];
+        this.currentImage = this.product.imageUrl[0];
         this.isLoading = false;
       },
       error: (error: any) => {
@@ -34,8 +38,13 @@ export class ProductComponent implements OnInit {
         this.isLoading = true;
       },
     });
-
     //console.log(this.slug);
+  }
+  catchImage(url: string) {
+    this.catchImagee = url;
+  }
+  handleChangeCurrentImage(url: string) {
+    this.currentImage = url;
   }
 
   ngOnDestroy(): void {
