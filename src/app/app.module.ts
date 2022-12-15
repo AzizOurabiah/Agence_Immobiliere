@@ -18,6 +18,7 @@ import { ROUTES } from 'src/app/app.routing';
 import { ProductComponent } from './components/product/product.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { PayementCardComponent } from './components/payement-card/payement-card.component';
+import { ProductsDetailsComponent } from './components/products-details/products-details.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PayementCardComponent } from './components/payement-card/payement-card.
     ProductComponent,
     LoadingComponent,
     PayementCardComponent,
+    ProductsDetailsComponent,
   ],
   imports: [
     BrowserModule,
