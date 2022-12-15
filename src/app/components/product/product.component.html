@@ -24,6 +24,8 @@
       <del>
         <h4>$ {{(product?.sold_price || 0)/100 | currency: "CAD " }}</h4>
       </del>
+      <h4>- {{product? (((product.regular_price - product.sold_price)/product.regular_price
+        )|percent): null}}</h4>
     </div>
     <div class="product-action-button flex">
       <button class="btn flex-1 btn-main">Pay Now</button>
