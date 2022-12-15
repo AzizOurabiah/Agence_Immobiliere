@@ -4,8 +4,9 @@
   <div class="single-product-image flex-1 gap-10 flex">
 
     <div class="single-product-image-list flex column gap-10 flex-1">
-      <img *ngFor="let url of product?.imageUrl" (click)="handleChangeCurrentImage(url)" width="100" [src]="url"
-        [alt]="product?.name" srcset="" [ngClass]="{current: currentImage == url}">
+      <img *ngFor="let url of product?.imageUrl" (click)="handleChangeCurrentImage(url)"
+        (mouseover)="handleChangeCurrentImage(url)" width="100" [src]="url" [alt]="product?.name" srcset=""
+        [ngClass]="{current: currentImage == url}">
     </div>
 
     <div class="single-product-image-current flex-3">
@@ -24,11 +25,12 @@
         <h4>$ {{(product?.sold_price || 0)/100 | currency: "CAD " }}</h4>
       </del>
     </div>
+    <div class="product-action-button flex">
+      <button class="btn flex-1 btn-main">Pay Now</button>
+    </div>
     <div class="single-product-view-details-created-at">
       Crée le : 12/12/2025
     </div>
-    <div class="product-action-button">
-      <button class="btn">Pay Now</button>
-    </div>
+    <app-payement-card></app-payement-card>
   </div>
 </div>

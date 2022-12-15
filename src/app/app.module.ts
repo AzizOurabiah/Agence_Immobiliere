@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from 'src/app/app.routing';
 import { ProductComponent } from './components/product/product.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { PayementCardComponent } from './components/payement-card/payement-card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     SignupComponent,
     ProductComponent,
     LoadingComponent,
+    PayementCardComponent,
   ],
   imports: [
     BrowserModule,
